@@ -51,7 +51,6 @@ const execution = Layer.succeed(
       Effect.sync(() => {
         wakeCalls.push(sessionID)
       }),
-    wakeActive: () => Effect.void,
     awaitIdle: () => Effect.void,
   }),
 )
