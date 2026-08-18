@@ -10,7 +10,11 @@
     "customConditions": ["browser"],
     "paths": {
       "@/*": ["./src/*"],
-      "@test/*": ["./test/*"]
+      "@test/*": ["./test/*"],
+      // Third-party plugin packages still declare the old scope. Point it at the
+      // workspace package so there is one Plugin type, not two unrelated ones.
+      "@opencode-ai/plugin": ["../plugin/src/index.ts"],
+      "@opencode-ai/plugin/*": ["../plugin/src/*"]
     }
   }
 }
