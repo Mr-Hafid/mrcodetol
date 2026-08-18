@@ -25,7 +25,7 @@ const archMap = {
 const platform = platformMap[os.platform()] ?? os.platform()
 const arch = archMap[os.arch()] ?? os.arch()
 const base = `opencode-${platform}-${arch}`
-const sourceBinary = platform === "windows" ? "opencode.exe" : "opencode"
+const sourceBinary = platform === "windows" ? "mrcodetol.exe" : "mrcodetol"
 const targetBinary = path.join(__dirname, "bin", "opencode.exe")
 
 function supportsAvx2() {
