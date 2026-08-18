@@ -18,10 +18,10 @@
 // without changing the fixture. Long-lived commands like `serve` will need a
 // different return shape — see the TODO at the bottom of OpencodeCli.
 import { test, type TestOptions } from "bun:test"
-import { FSUtil } from "@opencode-ai/core/fs-util"
-import { AppNodeBuilder } from "@opencode-ai/core/effect/app-node-builder"
-import { LayerNode } from "@opencode-ai/core/effect/layer-node"
-import { AppProcess } from "@opencode-ai/core/process"
+import { FSUtil } from "@mrcodetol/core/fs-util"
+import { AppNodeBuilder } from "@mrcodetol/core/effect/app-node-builder"
+import { LayerNode } from "@mrcodetol/core/effect/layer-node"
+import { AppProcess } from "@mrcodetol/core/process"
 import { Deferred, Duration, Effect, Layer, Queue, Schedule, Scope, Stream } from "effect"
 import { FetchHttpClient, HttpClient } from "effect/unstable/http"
 import { ChildProcess } from "effect/unstable/process"

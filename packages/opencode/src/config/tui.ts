@@ -2,27 +2,27 @@ export * as TuiConfig from "./tui"
 
 import path from "path"
 import { mergeDeep, unique } from "remeda"
-import { AppNodeBuilder } from "@opencode-ai/core/effect/app-node-builder"
-import { LayerNode } from "@opencode-ai/core/effect/layer-node"
+import { AppNodeBuilder } from "@mrcodetol/core/effect/app-node-builder"
+import { LayerNode } from "@mrcodetol/core/effect/layer-node"
 import { Cause, Context, Effect, Fiber, Layer } from "effect"
 import { ConfigParse } from "@/config/parse"
 import * as ConfigPaths from "@/config/paths"
 import { migrateTuiConfig } from "./tui-migrate"
 import { resolveHostAttentionSoundPaths } from "./tui-host-attention"
-import { Flag } from "@opencode-ai/core/flag/flag"
-import { isRecord } from "@opencode-ai/tui/util/record"
-import { Global } from "@opencode-ai/core/global"
-import { FSUtil } from "@opencode-ai/core/fs-util"
+import { Flag } from "@mrcodetol/core/flag/flag"
+import { isRecord } from "@mrcodetol/tui/util/record"
+import { Global } from "@mrcodetol/core/global"
+import { FSUtil } from "@mrcodetol/core/fs-util"
 import { CurrentWorkingDirectory } from "./tui-cwd"
 import { ConfigPlugin } from "@/config/plugin"
-import { TuiKeybind } from "@opencode-ai/tui/config/keybind"
-import { InstallationLocal, InstallationVersion } from "@opencode-ai/core/installation/version"
-import { makeRuntime } from "@opencode-ai/core/effect/runtime"
+import { TuiKeybind } from "@mrcodetol/tui/config/keybind"
+import { InstallationLocal, InstallationVersion } from "@mrcodetol/core/installation/version"
+import { makeRuntime } from "@mrcodetol/core/effect/runtime"
 import { Filesystem } from "@/util/filesystem"
 import { ConfigVariable } from "@/config/variable"
-import { Npm } from "@opencode-ai/core/npm"
+import { Npm } from "@mrcodetol/core/npm"
 import { FormatError, FormatUnknownError } from "@/cli/error"
-import { TuiConfig } from "@opencode-ai/tui/config"
+import { TuiConfig } from "@mrcodetol/tui/config"
 
 export const Info = TuiConfig.Info
 export type Info = TuiConfig.Info
@@ -238,7 +238,7 @@ const layer = Layer.effect(
           .install(dir, {
             add: [
               {
-                name: "@opencode-ai/plugin",
+                name: "@mrcodetol/plugin",
                 version: InstallationLocal ? undefined : InstallationVersion,
               },
             ],

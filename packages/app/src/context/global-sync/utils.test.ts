@@ -4,7 +4,7 @@ import type {
   ModelDefaultOutput,
   ModelListOutput,
   ProviderListOutput,
-} from "@opencode-ai/client/promise"
+} from "@mrcodetol/client/promise"
 import { directoryKey, normalizeAgentList, normalizePermissionRequest, normalizeProviderList } from "./utils"
 
 describe("normalizeAgentList", () => {

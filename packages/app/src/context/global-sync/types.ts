@@ -12,10 +12,10 @@ import type {
   SessionStatus,
   Todo,
   VcsInfo,
-} from "@opencode-ai/sdk/v2/client"
-import type { FileDiffInfo } from "@opencode-ai/client/promise"
-import { NormalizedProviderListResponse } from "@opencode-ai/session-ui/context"
-import type { CommandInfo, McpResource, McpServer, SessionMessageInfo } from "@opencode-ai/client/promise"
+} from "@mrcodetol/sdk/v2/client"
+import type { FileDiffInfo } from "@mrcodetol/client/promise"
+import { NormalizedProviderListResponse } from "@mrcodetol/session-ui/context"
+import type { CommandInfo, McpResource, McpServer, SessionMessageInfo } from "@mrcodetol/client/promise"
 import type { Accessor } from "solid-js"
 import type { SetStoreFunction, Store } from "solid-js/store"
 
