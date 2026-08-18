@@ -114,6 +114,7 @@ di posisi import tetap wajib.
 |---|---|---|---|
 | 2 | `46f0d16` | 1.369 | 35 paket `@opencode-ai/*` → `@mrcodetol/*` + `bun.lock` |
 | 1 | `125c7aa` | 608 | 25 doc root + 511 file `web` + 66 `app` + 6 `tui` |
+| 1 | `e118733` | 17 | glosarium penerjemahan `.opencode/glossary/` |
 
 ### Temuan saat eksekusi
 
@@ -126,9 +127,15 @@ di posisi import tetap wajib.
   (mode `120000`) yang di-checkout sebagai file teks karena `core.symlinks=false`
   di Windows. Ini membuat typecheck gagal dengan TS1128, **bukan** akibat
   rebranding. Untuk verifikasi, materialisasi sementara lalu pulihkan.
-- **`.opencode/glossary/` (17 file)** masih menyebut OpenCode. Ini glosarium
+- **`.opencode/glossary/` (17 file)** — **selesai** (`e118733`). Glosarium
   penerjemahan; kalau dibiarkan, terjemahan baru akan memasukkan kembali nama
-  lama. Belum masuk lapis mana pun — perlu diputuskan.
+  lama. Yang dipertahankan: 20 tautan PR upstream (`anomalyco/opencode`) sebagai
+  provenance aturan, dan 20 rujukan `opencode` huruf kecil yang masih benar
+  sampai Lapis 3 dikerjakan.
+- **`.opencode/agent/translator.md` tidak ada**, padahal dirujuk
+  `glossary/README.md` sebagai sumber utama aturan nama produk. Masalah lama,
+  bukan akibat rebranding, tapi berarti aturan nama produk global belum
+  terdokumentasi di mana pun.
 - **Username GitHub perlu dipastikan.** Remote memakai `Mr-Hafid`, sedangkan
   profil yang disebut adalah `mrhafid`. Keduanya username berbeda di GitHub.
   Belum ada perubahan remote.
